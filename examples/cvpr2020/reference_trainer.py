@@ -1,7 +1,10 @@
 #!/bin/env/python3
 from types import ModuleType
+import sys,os
+sys.path.append('D:\\chenchuyang\\learning\\lc-model-compression\\')
+#print(sys.path)
 from lc.models import torch as model_def
-from utils import AverageMeter, Recorder, format_time, data_loader, compute_acc_loss
+from examples.cvpr2020.utils import AverageMeter, Recorder, format_time, data_loader, compute_acc_loss
 import argparse
 import torch
 from torch import optim

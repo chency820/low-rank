@@ -1,5 +1,5 @@
 import sys,os
-sys.path.append(os.getcwd())
+sys.path.append('D:\\chenchuyang\\learning\\lc-model-compression\\')
 import examples.cvpr2020.cifar10_exp_setups
 #import cifar10_exp_setups
 from examples.cvpr2020.modified_lc import RankSelectionLcAlg as LCAlgorithm
