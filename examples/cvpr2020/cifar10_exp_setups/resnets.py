@@ -1,12 +1,14 @@
+import sys,os
+sys.path.append('D:\\chenchuyang\\learning\\lc-model-compression\\')
 from lc.models.torch.resnetcif import resnetcif20, resnetcif32, resnetcif56, resnetcif110
-from lc_for_rank_selection_cvpr2020.utils import AverageMeter, Recorder, format_time, data_loader, compute_acc_loss
+from examples.cvpr2020.utils import AverageMeter, Recorder, format_time, data_loader, compute_acc_loss
 import torch
 import time
 from lc.torch import ParameterTorch as LCParameterTorch, AsIs
 from torch import nn
 from lc.compression_types.low_rank import RankSelection
-from lc_for_rank_selection_cvpr2020.utils import add_flops_counting_methods
-from lc_for_rank_selection_cvpr2020.new_finetune import reparametrize_low_rank
+from examples.cvpr2020.utils import add_flops_counting_methods
+from examples.cvpr2020.new_finetune import reparametrize_low_rank
 from lc.models.torch.utils import count_params
 
 __all__ = ['resnet20_conv_only', 'resnet32_conv_only', 'resnet56_conv_only', 'resnet110_conv_only']
