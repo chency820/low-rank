@@ -18,6 +18,7 @@ if __name__ == '__main__':
         os.makedirs('references')
 
     model_names = model_def.__all__
+    print('modelnames: {}'.format(model_names))
     parser = argparse.ArgumentParser(description='Reference Network Trainer for MNIST and CIFAR10 networks')
     parser.add_argument('--arch', '-a', metavar='ARCH', default=model_names[0],
                         choices=model_names,
